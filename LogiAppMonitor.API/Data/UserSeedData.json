@@ -1,0 +1,23 @@
+[
+    {
+        "Username": "nvx585",
+        "Name": "Norbert",
+        "Email": "norbert.varga@havi.com",
+        "Created": "2000-01-01",
+        "LastActive": "2000-01-01"
+    },
+    {
+        "Username": "lmi989",
+        "Name": "Levente",
+        "Email": "levente.moldvai@havi.com",
+        "Created": "2000-01-01",
+        "LastActive": "2000-01-01"
+    },
+    {
+        "Username": "tom",
+        "Name": "Tom Heylen",
+        "Email": "tom.heylen@havi.com",
+        "Created": "2000-01-01",
+        "LastActive": "2000-01-01"
+    }
+]

@@ -1,0 +1,47 @@
+<div class="container mt-2">
+
+  <!-- <div class="input-group justify-content-center">
+      <input type="text" class="form-control" placeholder="Search">
+      <div class="input-group-append">
+        <button class="btn btn-secondary" type="button">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+    </div> -->
+  <br/>
+
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Created</th>
+          <th scope="col">Instance</th>
+          <th scope="col">Log Level</th>
+          <th scope="col">Logger</th>
+          <th scope="col">Message</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let logMessage of logMessages" [ngClass]="logCategory(logMessage.logLevel)">
+          <td>{{logMessage.Id}}</td>
+          <td>{{logMessage.createdAt | date: 'yyyy.MM.dd HH:mm:ss'}}</td>
+          <td>{{logMessage.instance}}</td>
+          <td>{{logMessage.logLevel}}</td>
+          <td>{{logMessage.logger}}</td>
+          <td>{{logMessage.loggerMessage}}</td>
+        </tr>
+      </tbody>
+    </table> 
+
+</div>
+
+<div class="d-flex justify-content-center mt-2">
+  <pagination [boundaryLinks]="true" 
+              [totalItems]="pagination.totalItems"
+              [itemsPerPage]="pagination.itemsPerPage"
+              [(ngModel)]="pagination.currentPage"
+              (pageChanged)="pageChanged($event)"
+  previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;">
+
+</pagination>
+</div>
